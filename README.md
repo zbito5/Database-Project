@@ -29,7 +29,7 @@ Copy code
 
 ├── 📂 scripts/
 
-│   ├── 📄 create_tables.sql      # SQL for creating the tables in the SportsLeague database
+│   ├── 📄 database creation.sql & databasetablechanges.sql # SQL for creating the tables in the SportsLeague database and editing our table creation
 
 │   ├── 📄 insert_data.sql        # SQL insert statements for populating the tables with data
 
