@@ -40,3 +40,14 @@ INSERT INTO Team (Name, Location, Sport, Wins, Losses) VALUES
     ('Chicago White Sox', 'Chicago, IL', 'MLB', 61, 101),
     ('Kansas City Royals', 'Kansas City, MO', 'MLB', 56, 106),
 
+INSERT INTO Team (Name, Location, Sport, Wins, Losses) VALUES
+('Florida Panthers', 'Sunrise, FL', 'NHL', 52, 24),
+('Boston Bruins', 'Boston, MA', 'NHL', 47, 20),
+('Toronto Maple Leafs', 'Toronto, ON', 'NHL', 46, 26),
+('Tampa Bay Lightning', 'Tampa, FL', 'NHL', 45, 29),
+('Detroit Red Wings', 'Detroit, MI', 'NHL', 41, 32),
+('Buffalo Sabres', 'Buffalo, NY', 'NHL', 39, 37),
+('Ottawa Senators', 'Ottawa, ON', 'NHL', 37, 41),
+('Montreal Canadiens', 'Montreal, QC', 'NHL', 30, 36),
+('New York Rangers', 'New York, NY', 'NHL', 55, 23),
+('Carolina Hurricanes', 'Raleigh, NC', 'NHL', 52, 23),
