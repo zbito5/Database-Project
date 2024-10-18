@@ -15,7 +15,7 @@ To run the SportsLeague database on your local machine:
 Clone the repository:
 bash
 Copy code
-git clone https://github.com/username/sportsleague-database.git
+git clone https://github.com/zbito5/sportsleague-database.git
 Open your SQL environment (e.g., MySQL Workbench or a local MySQL server).
 Run the create_tables.sql script to create the necessary tables.
 Use the insert_data.sql file to insert sample data into the database.
