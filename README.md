@@ -24,12 +24,19 @@ File Structure
 graphql
 Copy code
 📂 sportsleague-database/
+
 ├── 📄 README.md
+
 ├── 📂 scripts/
+
 │   ├── 📄 create_tables.sql      # SQL for creating the tables in the SportsLeague database
+
 │   ├── 📄 insert_data.sql        # SQL insert statements for populating the tables with data
+
 │   ├── 📄 queries.sql            # SQL queries to retrieve and manipulate the data
+
 └── 📄 LICENSE                    # License file (choose one like MIT, Apache 2.0)
+
 SQL Files
 create_tables.sql
 This script creates the necessary tables for the SportsLeague database, including:
@@ -37,18 +44,24 @@ This script creates the necessary tables for the SportsLeague database, includin
 game: Stores information about each game, including the home team, away team, date, location, score, and sport.
 Example of the game table:
 
-sql
-Copy code
 CREATE TABLE game (
+
     HomeTeam VARCHAR(50) NOT NULL,
+    
     AwayTeam VARCHAR(50) NOT NULL,
+    
     Date DATE NOT NULL,
+    
     Location VARCHAR(100),
+    
     Score VARCHAR(20),
+    
     Sport VARCHAR(10),
+    
     PRIMARY KEY (HomeTeam, AwayTeam, Date)
 );
 insert_data.sql
+
 This script contains SQL insert statements to populate the database with sample sports game data.
 
 Example:
