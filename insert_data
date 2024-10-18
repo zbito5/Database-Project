@@ -1,0 +1,42 @@
+ INSERT INTO Sport (Name, Description) VALUES
+     ('NFL', 'National Football League'),
+     ('NBA', 'National Basketball Association'),
+     ('MLB', 'Major League Baseball'),
+     ('NHL', 'National Hockey League');
+
+INSERT INTO Team (Name, Location, Sport, Wins, Losses) VALUES
+    ('Dallas Cowboys', 'Dallas, TX', 'NFL', 12, 5),
+    ('Philadelphia Eagles', 'Philadelphia, PA', 'NFL', 11, 6),
+    ('New York Giants', 'East Rutherford, NJ', 'NFL', 6, 11),
+    ('Washington Commanders', 'Washington, D.C.', 'NFL', 4, 13),
+    ('Detroit Lions', 'Detroit, MI', 'NFL', 12, 5),
+    ('Green Bay Packers', 'Green Bay, WI', 'NFL', 9, 8),
+    ('Minnesota Vikings', 'Minneapolis, MN', 'NFL', 7, 10),
+    ('Chicago Bears', 'Chicago, IL', 'NFL', 7, 10),
+    ('Tampa Bay Buccaneers', 'Tampa, FL', 'NFL', 9, 8),
+    ('New Orleans Saints', 'New Orleans, LA', 'NFL', 9, 8);
+    
+INSERT INTO Team (Name, Location, Sport, Wins, Losses) VALUES
+    ('Milwaukee Bucks', 'Milwaukee, WI', 'NBA', 58, 24),
+    ('Boston Celtics', 'Boston, MA', 'NBA', 57, 25),
+    ('Philadelphia 76ers', 'Philadelphia, PA', 'NBA', 54, 28),
+    ('Cleveland Cavaliers', 'Cleveland, OH', 'NBA', 51, 31),
+    ('New York Knicks', 'New York, NY', 'NBA', 47, 35),
+    ('Brooklyn Nets', 'Brooklyn, NY', 'NBA', 45, 37),
+    ('Miami Heat', 'Miami, FL', 'NBA', 44, 38),
+    ('Atlanta Hawks', 'Atlanta, GA', 'NBA', 41, 41),
+    ('Chicago Bulls', 'Chicago, IL', 'NBA', 40, 42),
+    ('Toronto Raptors', 'Toronto, ON', 'NBA', 39, 43),
+
+INSERT INTO Team (Name, Location, Sport, Wins, Losses) VALUES
+    ('Baltimore Orioles', 'Baltimore, MD', 'MLB', 101, 61),
+    ('Tampa Bay Rays', 'St. Petersburg, FL', 'MLB', 99, 63),
+    ('Toronto Blue Jays', 'Toronto, ON', 'MLB', 89, 73),
+    ('New York Yankees', 'New York, NY', 'MLB', 82, 80),
+    ('Boston Red Sox', 'Boston, MA', 'MLB', 78, 84),
+    ('Minnesota Twins', 'Minneapolis, MN', 'MLB', 87, 75),
+    ('Detroit Tigers', 'Detroit, MI', 'MLB', 78, 84),
+    ('Cleveland Guardians', 'Cleveland, OH', 'MLB', 76, 86),
+    ('Chicago White Sox', 'Chicago, IL', 'MLB', 61, 101),
+    ('Kansas City Royals', 'Kansas City, MO', 'MLB', 56, 106),
+
