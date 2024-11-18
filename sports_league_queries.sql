@@ -28,3 +28,17 @@ INSERT INTO formerteams (CoachID, Team) VALUES (136, 92);
 SELECT * FROM formerteams WHERE CoachID = 136 AND Team = 92;
 DELETE FROM formerteams WHERE CoachID = 136 AND Team = 92;
 UPDATE formerteams SET Team = 25 WHERE CoachID = 131 AND Team = 53;
+
+--- Execution of view creation
+CREATE VIEW HighSalaryPlayers AS
+SELECT 
+    ID,
+    Fname AS FirstName,
+    Lname AS LastName,
+    Salary,
+    Position
+FROM 
+    Employee
+WHERE 
+    Type = 'Player' AND Salary > 30000000;
+
