@@ -1,84 +1,96 @@
 # Database-Project--Sports-League
-Sports database project
-Description
 
-This repository contains SQL scripts for a SportsLeague database, which manages data related to sports leagues, teams, and game results. It includes table creation scripts and data insertion. Also the frontend implementation.
+## Description
 
-Features
+This repository contains SQL scripts for a SportsLeague database, which manages data related to sports leagues, teams, employees, games, and former teams. It includes table creation scripts, data insertion, queries, and a frontend implementation.
 
-Tables for storing game data: The database includes tables for games, teams, and their details such as score, location, and sport.
-Insert statements: Populate the database with sample game results.
-Queries: Retrieve game information such as scores, dates, and teams.
-Getting Started
-To run the SportsLeague database on your local machine:
+ ## Features
 
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/zbito5/sportsleague-database.git
-Open your SQL environment (e.g., MySQL Workbench or a local MySQL server).
-Run the database creation.sql script to create the necessary tables.
-Use the insert_data.sql file to insert sample data into the database.
-Use the sports_league_queries to run queries in database
-File Structure
-graphql
-Copy code
+- Database Management: Tables for games, teams, employees, and former teams, including relevant details such as scores, positions, and more.
+- Sample Data: Populate the database with realistic sports-related sample data.
+- Queries: Retrieve detailed information such as employee salaries, game scores, and team statistics.
+- Frontend Integration: A Java-based frontend for interacting with the database.
+
+---
+
+## Getting Started
+
+### Database Setup Using MySQL Workbench
+
+1. Clone the Repository:
+   - Run the following command in your terminal or command prompt:
+     bash
+     git clone https://github.com/zbito5/sportsleague-database.git
+
+2. Open MySQL Workbench:
+   - Launch MySQL Workbench and connect to your local MySQL server.
+
+3. Create the Database:
+   - Open the `database_creation.sql` file in MySQL Workbench.
+   - Execute the script by clicking the lightning bolt icon or pressing `Ctrl + Enter`.
+
+4. Populate the Database:
+   - Open the `insert_data.sql` file in MySQL Workbench.
+   - Execute the script to insert sample data.
+
+5. Run Sample Queries:
+   - Open the `sports_league_queries.sql` file in MySQL Workbench.
+   - Execute the queries provided to retrieve or manipulate data.
+
+6. Frontend Setup:
+   - If you want to test the frontend Java application, follow the steps in the "Frontend for Sports League" section below.
+
+## File Structure
 📂 sportsleague-database/
-
 ├── 📄 README.md
+├── 📄 database_creation.sql       # SQL script for creating tables in the SportsLeague database
+├── 📄 insert_data.sql             # SQL insert statements for populating the database
+├── 📄 sports_league_queries.sql   # SQL sample queries for the database
+├── 📂 frontend/                   # Java files for database frontend interaction and Contains MySQL JDBC connector for frontend
 
-├── 📄 database creation.sql & databasetablechanges.sql # SQL for creating the tables in the SportsLeague database and editing our table creation
+Frontend for SportsLeague MySQL Database
 
-├── 📄 insert_data.sql        # SQL insert statements for populating the tables with data
+A frontend for interacting with the SportsLeague MySQL database. This program allows the user to query, insert, update, or delete items in the database. Protections are in place to prevent malicious actions.
 
-|____ sports_league_queries  # queries for database
+Requirements
 
-|______ frontend
-└── 
-SQL Files
-create_tables.sql
-This script creates the necessary tables for the SportsLeague database, including:
+- MySQL server running locally.
+- MySQL JDBC connector (version 9.1.0 provided in the `jdbc` folder).
 
-game: Stores information about each game, including the home team, away team, date, location, score, and sport.
-Example of the game table:
+Steps to Run the Frontend
 
-CREATE TABLE game (
+1. Compile and Run:
+   - In the terminal, compile and run the frontend using:
+     bash
+     java -cp <path/to/jdbc>/mysql-connector-j-9.1.0.jar;. SQLFrontend
+     Replace `<path/to/jdbc>` with the actual path to the `jdbc` folder.
 
-    HomeTeam VARCHAR(50) NOT NULL,
-    
-    AwayTeam VARCHAR(50) NOT NULL,
-    
-    Date DATE NOT NULL,
-    
-    Location VARCHAR(100),
-    
-    Score VARCHAR(20),
-    
-    Sport VARCHAR(10),
-    
-    PRIMARY KEY (HomeTeam, AwayTeam, Date)
-);
-insert_data.sql
+2. Features:
+   - Query data: Retrieve game or team information.
+   - Insert data: Add new records to the database.
+   - Update data: Modify existing data (e.g., update a team’s win count).
+   - Delete data: Remove specific records from the database.
 
-This script contains SQL insert statements to populate the database with sample sports game data.
+Example Usage
 
-Example:
+SQL Queries
+Retrieve All Employees with Salaries Above $30 Million:
+SELECT * FROM Employee WHERE Salary > 30000000;
 
-sql
-Copy code
-INSERT INTO game (HomeTeam, AwayTeam, Date, Location, Score, Sport)
-VALUES ('Pittsburgh Penguins', 'Nashville Predators', '2024-04-15', 'Pittsburgh Penguins Arena', '2-2', 'NHL');
+Insert a New Game:
+INSERT INTO game (HomeTeam, AwayTeam, Date, Location, Score, Sport) 
+VALUES ('Dallas Cowboys', 'Miami Dolphins', '2024-12-01', 'AT&T Stadium', '21-17', 'NFL');
 
-sport_league_queries.sql
+Update Game Score:
+UPDATE game 
+SET Score = '35-21' 
+WHERE HomeTeam = 'Dallas Cowboys' AND AwayTeam = 'Miami Dolphins' AND Date = '2024-12-01';
 
-Has sample queries to run in the database
+Delete a Team:
+DELETE FROM team WHERE TeamName = 'Test Team';
 
-*****Frontend for Sports Leauge MySQL Database
+Notes
 
-A basic frontend for the Sports MySQL database. This program allows the user to query about, insert into, update, or delete items from the table. There are some protections to prevent malicious actions to the table. This program also requires a local database to be running on the system.
+- Ensure your MySQL server is running and accessible locally before starting.
 
-NOTES:
-	- This program requires using the JDBC MySQL connector. Version 9.1.0 is provided in the folder named "jdbc".
-	- To run the program, in the terminal, run the java file with:
-	java -cp <path/to/jdbc>/mysql-connector-j-9.1.0.jar;. SQLFrontend
-	...where <path/to/jdbc>/ is wherever the JDBC connector is.
+Enjoy managing your Sports League database!
